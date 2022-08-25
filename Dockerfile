@@ -1,4 +1,4 @@
-FROM node:v12.20.1
+FROM node:16.14.2-alpine3.15
 
 COPY . .
 
