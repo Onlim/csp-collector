@@ -7,6 +7,11 @@ app.use(express.json({
 }));
 // app.use(express.raw());
 
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
 app.post("/", (req, res) => {
 
   const reqJson = req.body;
